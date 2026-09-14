@@ -61,6 +61,21 @@
     object-fit: contain;
     display: block;
   }
+  .area-slide-caption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 12px 60px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.75));
+    color: #fff;
+    font-size: 0.92rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.4;
+    z-index: 1;
+    pointer-events: none;
+  }
   .area-slider-btn {
     position: absolute;
     top: 50%;
@@ -77,27 +92,28 @@
     align-items: center;
     justify-content: center;
     transition: background 0.2s;
-    z-index: 2;
+    z-index: 3;
   }
   .area-slider-btn:hover { background: rgba(0,0,0,0.7); }
   .area-slider-btn.prev { left: 12px; }
   .area-slider-btn.next { right: 12px; }
   .area-slider-dots {
     position: absolute;
-    bottom: 12px;
+    bottom: 8px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 7px;
-    z-index: 2;
+    z-index: 3;
   }
   .area-dot {
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: rgba(0,0,0,0.3);
+    background: rgba(255,255,255,0.5);
     cursor: pointer;
     transition: background 0.2s, transform 0.2s;
+    border: 1px solid rgba(0,0,0,0.2);
   }
   .area-dot.active {
     background: var(--primary, #009A44);
@@ -154,6 +170,7 @@
 
   @media (max-width: 600px) {
     .area-slider { max-width: 100%; }
+    .area-slide-caption { font-size: 0.82rem; padding: 10px 50px; }
   }
 </style>
 </head>
@@ -180,15 +197,27 @@
     <!-- 1. On-Chip Photonic AI Accelerator -->
     <div class="research-area" id="ai-accelerator">
       <h2 class="area-title">On-Chip Photonic AI Accelerator</h2>
-      <!-- <p class="area-desc">
+      <p class="area-desc">
         We design on-chip photonic AI accelerators — neuromorphic and reservoir computing architectures on standard silicon photonics platforms — for ultra-fast, energy-efficient inference. Operating at 1550 nm with terahertz bandwidths, sub-nanosecond latency, and EM immunity, these circuits enable non-von Neumann processing of time-series, speech, and defense signals on a single manufacturable chip, spanning the architecture, device building blocks, and foundry-compatible implementation.
-      </p> -->
+      </p>
       <div class="area-slider" data-slider="ai">
         <div class="area-slides">
-          <div class="area-slide active"><img src="Images/Research Page/neuromorphic1.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/reservoir1.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/reservoir2.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/reservoir3.jpg" alt=""></div>
+          <div class="area-slide active">
+            <img src="Images/Research Page/neuromorphic1.jpg" alt="">
+            <div class="area-slide-caption">Biological neuron and its photonic counterpart — synapse, dendrites, soma, and axon mapped to on-chip components.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/reservoir1.jpg" alt="">
+            <div class="area-slide-caption">Integrated photonic time-multiplexed reservoir computing architecture at 1550 nm with MZM nonlinear node and delay-line feedback.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/reservoir2.jpg" alt="">
+            <div class="area-slide-caption">NRMSE vs. number of virtual nodes on the NARMA-10 benchmark — reservoir+LR reaches 0.21, well below the linear baseline.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/reservoir3.jpg" alt="">
+            <div class="area-slide-caption">Word error rate on spoken digit recognition (FSDD) drops to 1.5% — a six-fold improvement over the linear baseline.</div>
+          </div>
         </div>
         <button class="area-slider-btn prev" aria-label="Previous">‹</button>
         <button class="area-slider-btn next" aria-label="Next">›</button>
@@ -214,18 +243,15 @@
       <!-- Slider hidden until images are ready
       <div class="area-slider" data-slider="quantum">
         <div class="area-slides">
-          <div class="area-slide active"><img src="Images/Research Page/quantum1.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/quantum2.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/quantum3.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/quantum4.jpg" alt=""></div>
+          <div class="area-slide active">
+            <img src="Images/Research Page/quantum1.jpg" alt="">
+            <div class="area-slide-caption">Caption 1.</div>
+          </div>
         </div>
         <button class="area-slider-btn prev" aria-label="Previous">‹</button>
         <button class="area-slider-btn next" aria-label="Next">›</button>
         <div class="area-slider-dots">
           <span class="area-dot active" data-index="0"></span>
-          <span class="area-dot" data-index="1"></span>
-          <span class="area-dot" data-index="2"></span>
-          <span class="area-dot" data-index="3"></span>
         </div>
       </div>
       -->
@@ -242,10 +268,22 @@
       <h2 class="area-title">On-Chip LiDAR</h2>
       <div class="area-slider" data-slider="lidar">
         <div class="area-slides">
-          <div class="area-slide active"><img src="Images/Research Page/lidar1.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/lidar2.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/lidar3.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/lidar4.jpg" alt=""></div>
+          <div class="area-slide active">
+            <img src="Images/Research Page/lidar1.jpg" alt="">
+            <div class="area-slide-caption">Silicon-on-insulator optical phased array with 48 linearly apodized grating antennas for on-chip LiDAR.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/lidar2.jpg" alt="">
+            <div class="area-slide-caption">3D radiation pattern, single-antenna transmission over 1500–1700 nm, and azimuth/elevation beam cuts.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/lidar3.jpg" alt="">
+            <div class="area-slide-caption">Continuous beam steering over 62° field of view at 1550 nm with sidelobe suppression exceeding 85 dB.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/lidar4.jpg" alt="">
+            <div class="area-slide-caption">Main-lobe angle vs. voltage — electrical steering across azimuth and elevation with tunable phase shifters.</div>
+          </div>
         </div>
         <button class="area-slider-btn prev" aria-label="Previous">‹</button>
         <button class="area-slider-btn next" aria-label="Next">›</button>
@@ -269,10 +307,22 @@
       <h2 class="area-title">Signal Processing / Manipulation using PIC</h2>
       <div class="area-slider" data-slider="signal">
         <div class="area-slides">
-          <div class="area-slide active"><img src="Images/Research Page/signal1.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/signal2.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/signal3.jpg" alt=""></div>
-          <div class="area-slide"><img src="Images/Research Page/signal4.jpg" alt=""></div>
+          <div class="area-slide active">
+            <img src="Images/Research Page/signal1.jpg" alt="">
+            <div class="area-slide-caption">1×13 channel Si₃N₄ arrayed waveguide grating (AWG) fabricated on a 300 mm silicon photonics platform.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/signal2.jpg" alt="">
+            <div class="area-slide-caption">AWG operating principle — wavelength-dependent path length differences separate input channels at the output focal plane.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/signal3.jpg" alt="">
+            <div class="area-slide-caption">Measured transmission across C+L bands (1500–1620 nm) — 0.92 dB insertion loss, –37.5 dB crosstalk, 20 nm FSR.</div>
+          </div>
+          <div class="area-slide">
+            <img src="Images/Research Page/signal4.jpg" alt="">
+            <div class="area-slide-caption">4-bit photonic analog-to-digital converter — cascaded MZI arms with distinct lengths give direct binary encoding.</div>
+          </div>
         </div>
         <button class="area-slider-btn prev" aria-label="Previous">‹</button>
         <button class="area-slider-btn next" aria-label="Next">›</button>
