@@ -138,34 +138,35 @@
     margin-bottom: 0;
   }
 
-  /* Scrollable news list with custom green scrollbar */
-  .home-news .home-block {
-    max-height: 500px;
+  /* Scrollable news list with custom green scrollbar (heading + See More stay fixed) */
+  .news-scroll {
+    max-height: 450px;
     overflow-y: auto;
     padding-right: 12px;
+    margin-bottom: 16px;
     scrollbar-width: thin;
     scrollbar-color: var(--primary, #009A44) rgba(0, 154, 68, 0.08);
   }
-  .home-news .home-block::-webkit-scrollbar {
+  .news-scroll::-webkit-scrollbar {
     width: 8px;
   }
-  .home-news .home-block::-webkit-scrollbar-track {
+  .news-scroll::-webkit-scrollbar-track {
     background: rgba(0, 154, 68, 0.08);
     border-radius: 10px;
   }
-  .home-news .home-block::-webkit-scrollbar-thumb {
+  .news-scroll::-webkit-scrollbar-thumb {
     background: var(--primary, #009A44);
     border-radius: 10px;
     transition: background 0.2s;
   }
-  .home-news .home-block::-webkit-scrollbar-thumb:hover {
+  .news-scroll::-webkit-scrollbar-thumb:hover {
     background: var(--accent, #00C853);
   }
 
   @media (max-width: 1024px){
     .home-grid{ grid-template-columns: 1fr 1.8fr; }
     .home-news{ grid-column: 1 / -1; }
-    .home-news .home-block { max-height: none; overflow-y: visible; padding-right: 0; }
+    .news-scroll { max-height: none; overflow-y: visible; padding-right: 0; }
   }
   @media (max-width: 700px){
     .home-grid{ grid-template-columns: 1fr; }
@@ -236,17 +237,19 @@
       <div class="home-block">
         <h2 class="block-title">Latest News</h2>
 
-        <div class="list-item">
-          <span class="date">AUGUST 6, 2026</span>
-          <p>Dr. Hossain gave an invited talk at IEEE RAPID titled <a href="https://rapid2026.exordo.com/programme/presentation/200" target="_blank">"Towards Foundry-Compatible Photonic Neuromorphic Computing"</a> (<a href="https://www.researchgate.net/publication/411172885_Towards_Foundry-Compatible_Photonic_Neuromorphic_Computing_Architecture_Advances_and_Implementation_Challenges" target="_blank">paper</a>) and chaired the <a href="https://rapid2026.exordo.com/programme/session/104" target="_blank">Hybrid Photonic/AI Accelerator Architecture</a> session.</p>
-        </div>
-        <div class="list-item">
-          <span class="date">AUGUST 2026</span>
-          <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026.</p>
-        </div>
-        <div class="list-item">
-          <span class="date">AUGUST 2026</span>
-          <p>Md Mufassal Ahmad is joining the lab as a new PhD student — welcome!</p>
+        <div class="news-scroll">
+          <div class="list-item">
+            <span class="date">AUGUST 6, 2026</span>
+            <p>Dr. Hossain gave an invited talk at IEEE RAPID titled <a href="https://rapid2026.exordo.com/programme/presentation/200" target="_blank">"Towards Foundry-Compatible Photonic Neuromorphic Computing"</a> (<a href="https://www.researchgate.net/publication/411172885_Towards_Foundry-Compatible_Photonic_Neuromorphic_Computing_Architecture_Advances_and_Implementation_Challenges" target="_blank">paper</a>) and chaired the <a href="https://rapid2026.exordo.com/programme/session/104" target="_blank">Hybrid Photonic/AI Accelerator Architecture</a> session.</p>
+          </div>
+          <div class="list-item">
+            <span class="date">AUGUST 2026</span>
+            <p>Two papers accepted at IEEE Photonics Conference (IPC) 2026.</p>
+          </div>
+          <div class="list-item">
+            <span class="date">AUGUST 2026</span>
+            <p>Md Mufassal Ahmad is joining the lab as a new PhD student — welcome!</p>
+          </div>
         </div>
 
         <div class="see-more-wrap">
