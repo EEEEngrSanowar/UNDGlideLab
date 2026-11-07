@@ -113,5 +113,3 @@ University of North Dakota
 📞 701.777.6270
 
 ---
-
-*Website designed and developed by [Md Sanowar Hossain](https://eeeengrsanowar.github.io/MdSanowarHossain/) (PhD Student at UND).*
