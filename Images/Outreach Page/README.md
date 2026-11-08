@@ -1,1 +1,1 @@
-Images for Outreach Page.
+Images for Gallery Page.
