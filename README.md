@@ -24,7 +24,7 @@ This repository hosts the source for the lab's public website, built with plain 
     ├── facilities.html         # Software, lab equipment, and fabrication
     ├── funding.html            # Grants and awards
     ├── news.html               # Full news feed
-    ├── outreach.html           # Lab outings and gallery
+    ├── gallery.html           # Lab outings and gallery
     │
     ├── css/
     │   └── style.css           # Global styles (colors, layout, typography)
