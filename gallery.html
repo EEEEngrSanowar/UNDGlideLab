@@ -1,40 +1,50 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | UND GLIDE Lab</title>
-<meta name="description" content="Lab outings, community activities, and moments from UND GLIDE Lab.">
+<meta name="description" content="Lab outings, community activities, conferences, and moments from UND GLIDE Lab.">
+
 <link rel="stylesheet" href="css/style.css">
+
 <style>
   .photo-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 20px;
     margin-top: 24px;
   }
+
   .photo-card {
     background: var(--card-bg, #fff);
     border: 1px solid var(--border, #e2e8f0);
     border-radius: 12px;
     overflow: hidden;
+    min-width: 0;
     transition: transform 0.2s, box-shadow 0.2s;
   }
+
   .photo-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(0,0,0,0.08);
   }
+
   .photo-card img {
     width: 100%;
     aspect-ratio: 4/3;
     object-fit: cover;
     display: block;
   }
+
   .photo-card .caption {
     padding: 14px 18px;
     font-size: 0.95rem;
     line-height: 1.5;
+    overflow-wrap: break-word;
   }
+
   .photo-card .caption .date {
     display: block;
     font-size: 0.8rem;
@@ -43,14 +53,29 @@
     margin-bottom: 4px;
     letter-spacing: 0.5px;
   }
+
+  /* Tablet: 2 columns */
+  @media (max-width: 900px) {
+    .photo-gallery {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  /* Mobile: 1 column */
+  @media (max-width: 600px) {
+    .photo-gallery {
+      grid-template-columns: 1fr;
+    }
+  }
 </style>
 </head>
+
 <body data-page="gallery">
 
 <section class="hero" style="padding:70px 24px;">
   <div class="container">
     <h1>Gallery</h1>
-    <p>Lab outings, community engagement, and moments from GLIDE Lab life.</p>
+    <p>Lab outings, community engagement, conferences, and moments from GLIDE Lab life.</p>
   </div>
 </section>
 
@@ -59,29 +84,52 @@
 
     <div class="photo-gallery">
 
+      <!-- Photo 1: Scooter's Coffee -->
       <div class="photo-card">
-        <img src="Images/Gallery Page/slide0.jpg" alt="GLIDE Lab at Scooter's Coffee">
+        <img src="Images/Gallery Page/slide0.jpg"
+             alt="GLIDE Lab at Scooter's Coffee">
         <div class="caption">
           <span class="date">AUGUST 2026</span>
           Coffee, conversation, and good company — GLIDE Lab members at Scooter's Coffee.
         </div>
       </div>
 
+      <!-- Photo 2: UND Organization Fair -->
       <div class="photo-card">
-        <img src="Images/Gallery Page/Org_Fair.jpg" alt="Lab outing">
+        <img src="Images/Gallery Page/Org_Fair.jpg"
+             alt="Sanowar at UND Organization Fair">
         <div class="caption">
           <span class="date">AUGUST 2026</span>
           Sanowar at the UND Organization Fair as Founding Vice President of the UND Optical Society.
         </div>
       </div>
 
-      <!-- <div class="photo-card">
-        <img src="outreach3.jpg" alt="Lab outing">
+      <!-- Photo 3: IEEE IPC 2026 Oral Presentation -->
+      <div class="photo-card">
+        <img src="Images/Gallery Page/slide1.jpg"
+             alt="Sanowar delivering oral presentation at IEEE Photonics Conference 2026">
         <div class="caption">
-          <span class="date">AUGUST 2026</span>
-          Add caption here.
+          <span class="date">NOVEMBER 2026</span>
+          Md Sanowar Hossain delivered an oral presentation titled
+          <a href="https://www.researchgate.net/publication/412285933_Silicon_Photonic_Optical_Phased_Array_with_Apodized_Grating_Antennas_for_On-Chip_LiDAR"
+             target="_blank" rel="noopener noreferrer">
+            <em>"Silicon Photonic Optical Phased Array with Apodized Grating Antennas for On-Chip LiDAR"</em>
+          </a>
+          at IEEE Photonics Conference 2026 in Denver, Colorado.
         </div>
-      </div> -->
+      </div>
+
+      <!-- Photo 4: IEEE IPC 2026 Poster Presentation -->
+      <div class="photo-card">
+        <img src="Images/Gallery Page/slide2.jpg"
+             alt="Sanowar presenting research poster at IEEE Photonics Conference 2026">
+        <div class="caption">
+          <span class="date">NOVEMBER 2026</span>
+          Md Sanowar Hossain presented a research poster titled
+          <em>"Integrated Photonic Optical Analog-to-Digital Converter (OADC)"</em>
+          at IEEE Photonics Conference 2026 in Denver, Colorado.
+        </div>
+      </div>
 
     </div>
 
@@ -89,5 +137,6 @@
 </section>
 
 <script src="js/script.js"></script>
+
 </body>
 </html>
