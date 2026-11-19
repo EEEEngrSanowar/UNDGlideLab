@@ -129,7 +129,7 @@ ul { list-style: none; }
 .hero {
   background: linear-gradient(135deg, var(--primary), #00722F 60%, var(--accent));
   color: #fff;
-  padding: 10px 24px;
+  padding: 10px 24px 20px;
   text-align: center;
   margin: 0;
 }
@@ -211,15 +211,25 @@ ul { list-style: none; }
 .card h3 { font-size: 1.3rem; margin-bottom: 8px; color: var(--primary); }
 .card p { font-size: 1.02rem; opacity: 0.85; }
 
+/* ---------- PILL TAGS / RESEARCH BUTTONS ---------- */
 .tag {
   display: inline-block;
-  background: rgba(0, 154, 68, 0.15);
-  color: var(--accent);
-  font-size: 0.8rem;
+  background: rgba(0, 154, 68, 0.1);
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  font-size: 0.9rem;
   font-weight: 600;
-  padding: 4px 10px;
-  border-radius: 20px;
-  margin: 2px 4px 2px 0;
+  padding: 10px 22px;
+  border-radius: 999px;
+  margin: 4px 6px 4px 0;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  cursor: pointer;
+}
+
+.tag:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
 }
 
 /* ---------- NEWS / LIST ---------- */
@@ -428,18 +438,23 @@ html:not([data-theme="dark"]) .contact-card a,
 html:not([data-theme="dark"]) .btn-primary,
 html:not([data-theme="dark"]) .nav-links a:hover,
 html:not([data-theme="dark"]) .nav-links a.active,
-html:not([data-theme="dark"]) .tag,
 html:not([data-theme="dark"]) .list-item .date,
 html:not([data-theme="dark"]) .pub-links a {
   color: #000000;
 }
 
 /* ---------- FORCE REDUCE GAP between hero and first section (ALL PAGES) ---------- */
+.hero {
+  margin-bottom: 0 !important;
+}
+
+section.hero + section,
 .hero + .section,
-.hero + section,
+.hero ~ .section:first-of-type,
 .navbar + .section,
 .navbar + section {
-  padding-top: 5px !important;
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 .section:first-of-type {
