@@ -48,8 +48,8 @@ ul { list-style: none; }
 .nav-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 20px 40px;
-  min-height: 80px;
+  padding: 8px 40px;
+  min-height: 70px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -65,8 +65,8 @@ ul { list-style: none; }
 }
 
 .brand-mark {
-  width: 120px;
-  height: 80px;
+  width: 90px;
+  height: 55px;
   background-image: url('../glide lab logo.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -112,7 +112,7 @@ ul { list-style: none; }
 @media (max-width: 860px) {
   .nav-links {
     position: absolute;
-    top: 80px;
+    top: 70px;
     left: 0;
     right: 0;
     background: var(--card-bg);
