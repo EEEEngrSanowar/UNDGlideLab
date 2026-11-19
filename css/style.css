@@ -131,6 +131,7 @@ ul { list-style: none; }
   color: #fff;
   padding: 10px 24px;
   text-align: center;
+  margin: 0;
 }
 .hero h1 {
   font-size: 1.5rem;
@@ -177,7 +178,7 @@ ul { list-style: none; }
 .section-sub {
   text-align: center;
   max-width: 640px;
-  margin: 0 auto 48px;
+  margin: 0 auto 16px;
   font-size: 1.05rem;
   opacity: 0.8;
 }
@@ -431,4 +432,21 @@ html:not([data-theme="dark"]) .tag,
 html:not([data-theme="dark"]) .list-item .date,
 html:not([data-theme="dark"]) .pub-links a {
   color: #000000;
+}
+
+/* ---------- FORCE REDUCE GAP between hero and first section (ALL PAGES) ---------- */
+.hero + .section,
+.hero + section,
+.navbar + .section,
+.navbar + section {
+  padding-top: 5px !important;
+}
+
+.section:first-of-type {
+  padding-top: 5px !important;
+}
+
+.section > .container > .section-title:first-child {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
