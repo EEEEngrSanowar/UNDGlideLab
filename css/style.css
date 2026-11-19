@@ -65,12 +65,13 @@ ul { list-style: none; }
 }
 
 .brand-mark {
+  width: 80px;
   height: 60px;
-  width: auto;
   background-image: url('../glide lab logo.png');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  display: inline-block;
 }
 
 .nav-links {
