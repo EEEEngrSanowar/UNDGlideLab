@@ -65,8 +65,8 @@ ul { list-style: none; }
 }
 
 .brand-mark {
-  width: 80px;
-  height: 60px;
+  width: 160px;
+  height: 100px;
   background-image: url('../glide lab logo.png');
   background-size: contain;
   background-repeat: no-repeat;
