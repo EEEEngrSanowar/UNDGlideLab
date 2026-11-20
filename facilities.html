@@ -35,15 +35,32 @@
   .facility-block a:hover { text-decoration: underline; }
 </style>
 </head>
-<body data-page="facilities">
-<section class="hero" style="padding:70px 24px;">
-  <div class="container">
-    <h1>Research Facilities</h1>
-    <p>Software tools, lab equipment, and fabrication resources.</p>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span> UND GLIDE Lab
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index">Home</a>
+      <a href="research.html" data-page="research">Research</a>
+      <a href="people.html" data-page="people">People</a>
+      <a href="publications.html" data-page="publications">Publications</a>
+      <a href="facilities.html" data-page="facilities">Facilities</a>
+      <a href="funding.html" data-page="funding">Funding</a>
+      <a href="news.html" data-page="news">News</a>
+      <a href="gallery.html" data-page="gallery">Gallery</a>
+      <button class="theme-toggle">🌙 Dark</button>
+    </nav>
+    <button class="nav-toggle">☰</button>
   </div>
-</section>
+</header>
+
 <section class="section">
   <div class="container">
+    <h1 style="text-align:center; margin-bottom:30px; color:var(--primary);">Research Facilities</h1>
+    
     <div class="facility-block">
       <h2 class="section-title">PIC Design Software</h2>
       <p>Simulation, layout, and system-level design tools we use for photonic integrated circuits.</p>
@@ -55,10 +72,12 @@
         <span class="tag">Python</span>
       </div>
     </div>
+
     <div class="facility-block">
       <h2 class="section-title">PIC Fabrication</h2>
       <p>Device fabrication runs through multi-project wafer (MPW) foundry services and the <a href="https://arts-sciences.und.edu/research/nanofoundry/index.html">UND Nanofoundry</a>.</p>
     </div>
+
     <div class="facility-block">
       <h2 class="section-title">PIC Characterization</h2>
       <p>Photonic test &amp; characterization setup at UND. More photos coming soon.</p>
@@ -70,6 +89,14 @@
     </div>
   </div>
 </section>
+
+<footer>
+  <p class="copyright">© 2026 UND GLIDE Lab. All rights reserved.</p>
+</footer>
+
 <script src="js/script.js"></script>
+<script>
+document.querySelector('.nav-links a[data-page="facilities"]').classList.add('active');
+</script>
 </body>
 </html>
