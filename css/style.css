@@ -85,10 +85,22 @@ ul { list-style: none; }
   font-weight: 500;
   color: var(--text);
   opacity: 0.85;
-  transition: opacity 0.2s;
+  transition: opacity 0.2s, color 0.2s;
+  padding-bottom: 4px;
+  border-bottom: 3px solid transparent;
 }
 
-.nav-links a:hover, .nav-links a.active { opacity: 1; color: var(--accent); }
+.nav-links a:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.nav-links a.active {
+  opacity: 1;
+  color: var(--primary);
+  font-weight: 700;
+  border-bottom: 3px solid var(--primary);
+}
 
 .theme-toggle {
   background: none;
@@ -125,27 +137,9 @@ ul { list-style: none; }
   .nav-toggle { display: block; }
 }
 
-/* ---------- HERO ---------- */
+/* ---------- HERO (hidden on all pages) ---------- */
 .hero {
-  background: linear-gradient(135deg, var(--primary), #00722F 60%, var(--accent));
-  color: #fff;
-  padding: 10px 24px 20px;
-  text-align: center;
-  margin: 0;
-}
-.hero h1 {
-  font-size: 1.5rem;
-  font-weight: 800;
-  margin-bottom: 6px;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.hero p {
-  font-size: 0.9rem;
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.92;
+  display: none !important;
 }
 
 .btn-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
@@ -436,19 +430,7 @@ html:not([data-theme="dark"]) .pub-item h4,
 html:not([data-theme="dark"]) .contact-card h4,
 html:not([data-theme="dark"]) .contact-card a,
 html:not([data-theme="dark"]) .btn-primary,
-html:not([data-theme="dark"]) .nav-links a:hover,
-html:not([data-theme="dark"]) .nav-links a.active,
 html:not([data-theme="dark"]) .list-item .date,
 html:not([data-theme="dark"]) .pub-links a {
   color: #000000;
-}
-
-/* ---------- HERO MARGIN RESET ---------- */
-.hero {
-  margin-bottom: 0 !important;
-}
-
-/* Hide hero section on all pages */
-.hero {
-  display: none !important;
 }
