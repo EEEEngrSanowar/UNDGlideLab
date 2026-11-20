@@ -14,13 +14,28 @@
   .list-item p a:hover { text-decoration: underline; }
 </style>
 </head>
-<body data-page="funding">
-<section class="hero" style="padding:70px 24px;">
-  <div class="container">
-    <h1>Funding, Grants &amp; Awards</h1>
-    <p>Support that enables our research.</p>
+<body>
+
+<header class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+      <span class="brand-mark"></span> UND GLIDE Lab
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" data-page="index">Home</a>
+      <a href="research.html" data-page="research">Research</a>
+      <a href="people.html" data-page="people">People</a>
+      <a href="publications.html" data-page="publications">Publications</a>
+      <a href="facilities.html" data-page="facilities">Facilities</a>
+      <a href="funding.html" data-page="funding">Funding</a>
+      <a href="news.html" data-page="news">News</a>
+      <a href="gallery.html" data-page="gallery">Gallery</a>
+      <button class="theme-toggle">🌙 Dark</button>
+    </nav>
+    <button class="nav-toggle">☰</button>
   </div>
-</section>
+</header>
+
 <section class="section">
   <div class="container">
     <div class="list-item">
@@ -33,6 +48,14 @@
     </div>
   </div>
 </section>
+
+<footer>
+  <p class="copyright">© 2026 UND GLIDE Lab. All rights reserved.</p>
+</footer>
+
 <script src="js/script.js"></script>
+<script>
+document.querySelector('.nav-links a[data-page="funding"]').classList.add('active');
+</script>
 </body>
 </html>
