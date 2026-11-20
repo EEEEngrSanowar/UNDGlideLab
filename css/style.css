@@ -447,3 +447,8 @@ html:not([data-theme="dark"]) .pub-links a {
 .hero {
   margin-bottom: 0 !important;
 }
+
+/* Hide hero section on all pages */
+.hero {
+  display: none !important;
+}
