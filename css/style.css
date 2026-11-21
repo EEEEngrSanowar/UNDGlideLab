@@ -343,19 +343,29 @@ ul { list-style: none; }
 }
 
 /* ---------- FOOTER ---------- */
+/* Light mode footer */
 footer {
   background: none !important;
   color: #000 !important;
-  padding: 20px 24px;
-  text-align: center;
-  margin-top: auto;
+  padding: 20px 24px !important;
+  text-align: center !important;
+  margin-top: auto !important;
+  display: block !important;
 }
 
-footer .copyright {
+footer .copyright,
+footer p {
   color: #000 !important;
-  font-size: 0.9rem;
-  margin: 0;
-  opacity: 1;
+  font-size: 0.9rem !important;
+  margin: 0 !important;
+  opacity: 1 !important;
+}
+
+/* Dark mode footer — white text */
+[data-theme="dark"] footer,
+[data-theme="dark"] footer .copyright,
+[data-theme="dark"] footer p {
+  color: #fff !important;
 }
 
 
