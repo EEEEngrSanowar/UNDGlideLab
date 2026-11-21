@@ -437,3 +437,7 @@ html:not([data-theme="dark"]) .list-item .date,
 html:not([data-theme="dark"]) .pub-links a {
   color: #000000;
 }
+
+footer {
+  display: none !important;
+}
