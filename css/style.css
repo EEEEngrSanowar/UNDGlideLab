@@ -438,6 +438,4 @@ html:not([data-theme="dark"]) .pub-links a {
   color: #000000;
 }
 
-footer {
-  display: none !important;
-}
+
